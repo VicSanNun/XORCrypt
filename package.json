@@ -1,0 +1,22 @@
+{
+  "name": "xorcrypt",
+  "version": "1.0.0",
+  "description": "Implementing an XOR algorithm for Cryptography",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VicSanNun/XORCrypt.git"
+  },
+  "keywords": [
+    "cryptography"
+  ],
+  "author": "VictorNunes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VicSanNun/XORCrypt/issues"
+  },
+  "homepage": "https://github.com/VicSanNun/XORCrypt#readme"
+}
