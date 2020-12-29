@@ -11,4 +11,7 @@ const decryptText = cryptographer.decrypt(cryptText, 1739)
 console.log(decryptText)
 
 const data = fileHandler.readFile('a.txt');
-//console.log(data)
+console.log(data)
+
+const cryptText2 = (cryptographer.crypt(data, 1739))
+console.log(cryptText2)
