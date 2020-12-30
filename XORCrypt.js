@@ -6,9 +6,28 @@ const fileHandler = new FileHandler;
 
 func = process.argv[2];
 
-if(func == "-h" || func == "--help") {
+if(func == '--help' || func == '-h') {
     usage();
-} 
+}
+else if(func == '--crypt' || func == '-c') {
+    const file = process.argv[3];
+    const key = process.argv[4];
+    const outFile = process.argv[5];
+    const readFile = fileHandler.readFile(file);
+    const cryptText = cryptographer.crypt(readFile, key)
+    console.log(typeof Object.entries(cryptText))
+    const writeFile = fileHandler.writeFile(outFile, cryptText)
+    console.log(writeFile)
+}
+else if(func == '--decrypt' || func == '-d'){
+    //decrypt();
+}
+else if(func == '--message_digest' || func == '-md'){
+    //ms();
+}
+else {
+    unhandledOpt();
+}
 
 const cryptText = (cryptographer.crypt("Victor", 1739))
 //console.log(cryptText)
@@ -41,4 +60,8 @@ function usage() {
     console.log('Execute:' + "\x1b[34m",'node XORCrypt.js [function] [infile] [outfile] [opt: key]\n', "\x1b[0m")
     console.log('Examples:\n ')
     console.table(devices)
+}
+
+function unhandledOpt() {
+    console.log("\x1b[31m",'An Unhandled Option', "\x1b[0m");
 }

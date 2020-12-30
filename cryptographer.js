@@ -2,7 +2,7 @@ const Convert = require('./convert')
 const convert = new Convert;
 
 class Cryptographer {
-  crypt(msg, key) {
+  crypt(msg, key=1) {
     let arrCrypt = [];
   
     const converted_msg = convert.textToUTF16(msg);
@@ -14,7 +14,7 @@ class Cryptographer {
     return arrCrypt;
   }
 
-  decrypt(msg_crypt, key) {
+  decrypt(msg_crypt, key=1) {
     let arrMsg = [];
 
     for(let car of msg_crypt) {
